@@ -87,23 +87,12 @@ Write a program that:
 2. Prompts the user to guess the number with a hint:
    - If the guess is within 5 numbers of the correct answer, print `"Getting warm!"`.
    - Otherwise, print `"Cold!"`.
-3. Continue until the user guesses the number correctly.
+3. Continue until the user guesses the number correctly or after a certain number of attempts.
 
 ---
 
-## 9. Guess the Number Game
 
-**Description:** The program generates a random number, and the user must guess it. The program provides feedback ("Too high" or "Too low") after each guess.
-
-**Features:**
-- Generate a random number between 1 and 100.
-- Allow the user to input guesses.
-- Compare the user’s guess to the random number.
-- End the game when the user guesses correctly or after a certain number of attempts.
-
----
-
-## 10. Simple Dice Roller
+## 9. Simple Dice Roller
 
 **Description:** Simulate rolling a dice. The user specifies how many sides the dice should have, and the program generates a random result.
 
@@ -115,7 +104,7 @@ Write a program that:
 
 ---
 
-## 11. Rock, Paper, Scissors
+## 10. Rock, Paper, Scissors
 
 **Description:** A simple game where the user plays against the computer.
 
@@ -128,10 +117,19 @@ Write a program that:
 
 ---
 
-## 12. Simple Quiz Game
+## 11. Simple Quiz Game
 
 **Description:** Create a quiz with multiple-choice questions, and the user must select the correct answer.
-
+**quiz:**:
+```
+let questions = vec![
+        ("How many legs do dogs have?", vec!["1", "2", "4", "6"], 2),
+        ("What is the color of the sky during a clear day?", vec!["Red", "Blue", "Green", "Yellow"], 1),
+        ("How many continents are there on Earth?", vec!["5", "6", "7", "8"], 2),
+        ("What is 2 + 2?", vec!["3", "4", "5", "6"], 1),
+        ("Which planet do we live on?", vec!["Mars", "Earth", "Venus", "Jupiter"], 1),
+    ];
+```
 **Features:**
 - Present questions with multiple options.
 - Accept the user’s input as their answer.
@@ -140,7 +138,7 @@ Write a program that:
 
 ---
 
-## 13. Basic Password Strength Checker
+## 12. Basic Password Strength Checker
 
 **Description:** Check the strength of a password entered by the user based on simple rules.
 
