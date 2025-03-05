@@ -147,3 +147,120 @@ let questions = vec![
 - Check if the password is at least 8 characters long.
 - Check if it contains both letters and numbers.
 - Provide feedback such as `"Weak"`, `"Moderate"`, or `"Strong"` based on the criteria.
+
+
+
+
+
+# Chapter 2: Programming a Guessing Game - Workbook
+
+## Chapter Summary
+This chapter introduced several fundamental Rust concepts through building a guessing game:
+
+1. **User Input**: Using `std::io` to read user input from the terminal
+2. **Error Handling**: Using `.expect()` for simple error handling and `match` with `Result` for more robust error handling
+3. **Comparison**: Using `std::cmp::Ordering` to compare values
+4. **Random Number Generation**: Using the `rand` crate to generate random numbers
+5. **External Dependencies**: Adding and using external crates through Cargo
+6. **Variable Shadowing**: Reusing variable names to convert between types
+7. **Match Expressions**: Using pattern matching for control flow
+8. **Loops**: Creating repeating program behavior with the `loop` keyword
+
+## Exercises
+
+### Exercise 1: Hello, Cargo!
+Create a new Rust project and modify it to print a custom message.
+
+**Tasks:**
+1. Create a new project called `hello_cargo` using `cargo new hello_cargo`
+2. Navigate to the project directory
+3. Modify the `main.rs` file to print "Welcome to Rust Programming!"
+4. Compile and run your program using `cargo run`
+
+### Exercise 2: Name Greeter
+Write a program that asks for and processes user input.
+
+**Tasks:**
+1. Create a program that prompts the user to enter their name
+2. Read the input using `std::io`
+3. Trim whitespace from the input
+4. Print a greeting using the entered name
+
+### Exercise 3: Random Number Generator
+Practice using the `rand` crate.
+
+**Tasks:**
+1. Add the `rand` crate as a dependency in your `Cargo.toml`
+2. Write a program that generates a random number between 1 and 20
+3. Print the generated number
+4. Run the program multiple times to verify it generates different numbers
+
+### Exercise 4: Number Comparison
+Practice using the `std::cmp::Ordering` enum.
+
+**Tasks:**
+1. Ask the user to enter two numbers
+2. Compare the numbers using `cmp`
+3. Print "First number is larger" or "Second number is larger" or "Numbers are equal" based on the comparison
+
+### Exercise 5: Error Handling with Match
+Practice robust error handling.
+
+**Tasks:**
+1. Write a program that asks the user to enter a number
+2. Use a `match` expression with `parse()` to handle both successful number parsing and errors
+3. If parsing succeeds, print the number doubled
+4. If parsing fails, print an error message and ask for input again
+
+### Exercise 6: Mini Guessing Game
+Create a simplified version of the guessing game.
+
+**Tasks:**
+1. Generate a random number between 1 and 10
+2. Give the user 3 attempts to guess the number
+3. After each guess, tell them if their guess was too high, too low, or correct
+4. If they guess correctly, congratulate them and end the game
+5. If they use all 3 attempts without guessing correctly, reveal the answer
+
+### Exercise 7: Temperature Converter
+Create a practical tool using concepts from this chapter.
+
+**Tasks:**
+1. Ask the user if they want to convert from Celsius to Fahrenheit (C->F) or from Fahrenheit to Celsius (F->C)
+2. Ask for the temperature value
+3. Convert the temperature using the appropriate formula:
+   - C to F: (C × 9/5) + 32
+   - F to C: (F - 32) × 5/9
+4. Handle invalid inputs gracefully with appropriate error messages
+
+### Exercise 8: Dice Roller
+Create a program that simulates rolling dice.
+
+**Tasks:**
+1. Ask the user how many sides the dice should have
+2. Ask how many dice they want to roll
+3. Generate and display random numbers for each die
+4. Calculate and display the total sum
+5. Ask if they want to roll again
+
+### Exercise 9: Number Guessing Game with Hints
+Enhance the guessing game with additional features.
+
+**Tasks:**
+1. Generate a random number between 1 and 100
+2. Track the number of guesses the user makes
+3. Give "warmer" or "colder" hints based on how close the new guess is to the correct number compared to the previous guess
+4. When the user guesses correctly, tell them how many attempts it took
+5. Handle non-numeric inputs properly
+
+### Exercise 10: Password Validator
+Use string handling and conditional logic to validate a password.
+
+**Tasks:**
+1. Ask the user to create a password
+2. Check if the password meets these requirements:
+   - At least 8 characters long
+   - Contains at least one uppercase letter
+   - Contains at least one number
+3. For each failed requirement, print a specific message
+4. If all requirements are met, tell the user their password is accepted
